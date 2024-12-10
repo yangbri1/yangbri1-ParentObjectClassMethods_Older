@@ -78,10 +78,19 @@ public class SampleClass {
 
     //    implement a custom .toString(){} method here.
     public String toString(){
-        // type-casting instance field 'a' from 'int' to "String" data type
+        // type-casting instance field 'a' from 'int' to "String" data type using String.valueOf() method
         String a_toString = String.valueOf(a);
+
+        // String concatenation to convert instance field 'b' (boolean) to "String" type
+        String b_toString = "" + b;
+
+        // https://stackoverflow.com/questions/12361492/how-to-determine-the-primitive-type-of-a-primitive-variable
+        // Aside: On how to retrieve data type of a primitive -- short answer can't directly, need to use boxed type (Object) to wrap & then can .getClass().getSimpleName()
         
-        return(a_toString);
+        // return instance fields as String type
+        return(a_toString + b_toString); 
+        
+        
     }
     
 }
